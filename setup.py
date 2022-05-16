@@ -4,14 +4,14 @@ with open("README.md", encoding="UTF-8") as f:
     long_desc = f.read()
 
 setup(
-    name='ursina',
-    description='An easy to use game engine/framework for python.',
+    name='bc_engine',
+    description='An easy to use game engine/framework for python. (fork)',
     long_description=long_desc,
     long_description_content_type="text/markdown",
-    version='4.1.1',
-    url='https://github.com/pokepetter/ursina',
-    author='Petter Amland',
-    author_email='pokepetter@gmail.com',
+    version='1.0.0',
+    url='https://github.com/Chateauvisionn/bc_engine',
+    author='Chateauvisionn',
+    author_email='chateauvision@outlook.fr',
     license='MIT',
     keywords='game development',
     packages=find_packages(),
@@ -30,5 +30,5 @@ setup(
         'psutil',
         ],
     },
-    python_requires='>=3.6',
+    python_requires='>=3.7',
 )
