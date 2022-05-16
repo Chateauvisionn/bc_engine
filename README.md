@@ -33,6 +33,7 @@ On some systems you might have to use pip3 instead of pip in order to use Python
 
 ## Project Structure
 
+```
 📁bc_engine                # the actual bc_engine module.
     📁audio                 # built-in audio clips.
     📁editor                # the 3d level editor for bc_engine.
@@ -47,3 +48,4 @@ On some systems you might have to use pip3 instead of pip in order to use Python
     📃audio.py
     ...
         # bc_engine base modules, like code for Entity, input_handler, Text, window and so on.
+```
