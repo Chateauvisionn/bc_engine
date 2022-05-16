@@ -60,8 +60,8 @@ def load_model(name, path=application.asset_folder, file_types=('.bam', '.ursina
                 # print('found obj', filename)
                 # m = loader.loadModel(filename)
                 # m.setAttrib(CullFaceAttrib.make(CullFaceAttrib.MCullCounterClockwise))
-                m = obj_to_ursinamesh(path=path, name=name, return_mesh=True)
-                m.path = filename
+                m = base.loader.loadModel(filename)
+
                 m.name = name
                 imported_meshes[name] = m
                 return m
