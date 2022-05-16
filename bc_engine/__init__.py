@@ -10,7 +10,7 @@ from math import floor, ceil, inf
 from bc_engine.window import instance as window
 from bc_engine.camera import instance as camera
 from bc_engine.mouse import instance as mouse
-from bc_engine.main import Ursina
+from bc_engine.main import Ursina, objfile
 from bc_engine.ursinamath import *
 from bc_engine.ursinastuff import *
 from bc_engine import input_handler
