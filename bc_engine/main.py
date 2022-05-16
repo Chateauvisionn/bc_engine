@@ -1,3 +1,4 @@
+from importlib.abc import Loader
 import time
 
 from direct.showbase.ShowBase import ShowBase
@@ -272,6 +273,10 @@ class Ursina(ShowBase):
             print('application successfully started')
 
         super().run()
+    
+    def objfile(self, model: str):
+        m = Loader.loadModel(model)
+        return m
 
 
 if __name__ == '__main__':
