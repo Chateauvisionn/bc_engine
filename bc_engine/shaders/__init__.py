@@ -1,0 +1,17 @@
+from bc_engine.shaders.unlit_shader import unlit_shader
+from bc_engine.shaders.lit_with_shadows_shader import lit_with_shadows_shader
+from bc_engine.shaders.normals_shader import normals_shader
+from bc_engine.shaders.basic_lighting_shader import basic_lighting_shader
+from bc_engine.shaders.triplanar_shader import triplanar_shader
+from bc_engine.shaders.matcap_shader import matcap_shader
+from bc_engine.shaders.colored_lights_shader import colored_lights_shader
+from bc_engine.shaders.transition_shader import transition_shader
+
+
+
+# post processing effects
+from bc_engine.shaders.screenspace_shaders.camera_vertical_blur import camera_vertical_blur_shader
+from bc_engine.shaders.screenspace_shaders.camera_contrast import camera_contrast_shader
+from bc_engine.shaders.screenspace_shaders.camera_grayscale import camera_grayscale_shader
+from bc_engine.shaders.screenspace_shaders.fxaa import fxaa_shader
+from bc_engine.shaders.screenspace_shaders.ssao import ssao_shader
