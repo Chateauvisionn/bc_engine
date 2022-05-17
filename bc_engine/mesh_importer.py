@@ -1,7 +1,4 @@
-import os
-import glob
-import platform
-import subprocess
+import os, glob, platform, subprocess
 from copy import copy, deepcopy
 from pathlib import Path
 from bc_engine.mesh import Mesh
@@ -42,7 +39,7 @@ def load_model(name, path=application.asset_folder, file_types=('.bam', '.ursina
         for filename in path.glob(f'**/{name}{filetype}'):
             if filetype == '.bam':
                 print_info('loading bam')
-                return loader.loadModel(filename)
+                return base.loader.loadModel(filename)
 
             if filetype == '.ursinamesh':
                 try:
@@ -57,10 +54,10 @@ def load_model(name, path=application.asset_folder, file_types=('.bam', '.ursina
 
 
             if filetype == '.obj':
-                # print('found obj', filename)
-                # m = loader.loadModel(filename)
-                # m.setAttrib(CullFaceAttrib.make(CullFaceAttrib.MCullCounterClockwise))
+                if base.development_mode:
+                    print('found obj', filename)
                 m = base.loader.loadModel(filename)
+                m.setAttrib(CullFaceAttrib.make(CullFaceAttrib.MCullCounterClockwise))
 
                 m.name = name
                 imported_meshes[name] = m
@@ -74,7 +71,7 @@ def load_model(name, path=application.asset_folder, file_types=('.bam', '.ursina
 
             else:
                 try:
-                    return loader.loadModel(filename)
+                    return base.loader.loadModel(filename)
                 except:
                     pass
 
