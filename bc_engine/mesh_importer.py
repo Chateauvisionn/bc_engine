@@ -54,7 +54,7 @@ def load_model(name, path=application.asset_folder, file_types=('.bam', '.ursina
 
 
             if filetype == '.obj':
-                if base.development_mode:
+                if application.development_mode:
                     print('found obj', filename)
                 m = base.loader.loadModel(filename)
                 m.setAttrib(CullFaceAttrib.make(CullFaceAttrib.MCullCounterClockwise))
