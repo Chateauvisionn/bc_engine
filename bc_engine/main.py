@@ -274,9 +274,6 @@ class Ursina(ShowBase):
 
         super().run()
     
-    def objfile(self, model: str):
-        m = Loader.loadModel(model)
-        return m
 
 
 if __name__ == '__main__':
